@@ -1,0 +1,97 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <S:Fault xmlns:ns3="http://www.w3.org/2003/05/soap-envelope">
+         <faultcode>S:Server</faultcode>
+         <faultstring>T00001</faultstring>
+         <detail>
+            <ns2:AuthorizeChangeRequestFault1_Fault xmlns:ns2="http://www.donriver.com/finance/products/mpos/channels/security/web">
+               <Version>2</Version>
+               <Channel>
+                  <ChannelType>WEB</ChannelType>
+                  <ChannelVersion>2</ChannelVersion>
+               </Channel>
+               <Session>
+                  <ID>c39738bde130438788271c2a5f59d21d</ID>
+               </Session>
+               <SourceSystem>
+                  <SourceSystemID>SoapUI</SourceSystemID>
+                  <SourceTransactionID>0000-0000-0000</SourceTransactionID>
+                  <RequestTime>2010-01-01T01:02:03.000Z</RequestTime>
+               </SourceSystem>
+               <InternalReferenceID>?</InternalReferenceID>
+               <ExternalReferenceID>SoapUITest</ExternalReferenceID>
+               <Status>
+                  <ErrorCode>T00001</ErrorCode>
+                  <Message>Invalid transaction ?.</Message>
+               </Status>
+            </ns2:AuthorizeChangeRequestFault1_Fault>
+            <ns2:exception class="com.donriver.finance.products.mpos.channels.security.web.AuthorizeChangeRequestFaultMsg" note="To disable this feature, set com.sun.xml.ws.fault.SOAPFaultBuilder.disableCaptureStackTrace system property to false" xmlns:ns2="http://jax-ws.dev.java.net/">
+               <message>T00001</message>
+               <ns2:stackTrace>
+                  <ns2:frame class="sun.reflect.GeneratedConstructorAccessor68" line="unknown" method="newInstance"/>
+                  <ns2:frame class="sun.reflect.DelegatingConstructorAccessorImpl" file="DelegatingConstructorAccessorImpl.java" line="39" method="newInstance"/>
+                  <ns2:frame class="java.lang.reflect.Constructor" file="Constructor.java" line="527" method="newInstance"/>
+                  <ns2:frame class="com.donriver.finance.services.aop.impl.helpers.ErrorHandler" file="ErrorHandler.java" line="181" method="_convertToWebFault"/>
+                  <ns2:frame class="com.donriver.finance.services.aop.impl.helpers.ErrorHandler" file="ErrorHandler.java" line="87" method="handleWebFault"/>
+                  <ns2:frame class="com.donriver.finance.services.web.aop.impl.WebMethodFaultHandlingAspect" file="WebMethodFaultHandlingAspect.java" line="75" method="convertExceptionToFault"/>
+                  <ns2:frame class="com.donriver.finance.products.mpos.channels.security.web.facade.SecurityWebChannelFacadeImpl" file="SecurityWebChannelFacadeImpl.java" line="153" method="authorizeChangeRequest_aroundBody158"/>
+                  <ns2:frame class="com.donriver.finance.products.mpos.channels.security.web.facade.SecurityWebChannelFacadeImpl$AjcClosure159" file="SecurityWebChannelFacadeImpl.java" line="1" method="run"/>
+                  <ns2:frame class="org.aspectj.runtime.reflect.JoinPointImpl" file="JoinPointImpl.java" line="149" method="proceed"/>
+                  <ns2:frame class="com.donriver.finance.services.context.impl.MethodRequestContextInitializer" file="MethodRequestContextInitializer.java" line="32" method="initializeRequestContext"/>
+                  <ns2:frame class="com.donriver.finance.services.web.aop.impl.helpers.WebMethodRequestContextInitializer" file="WebMethodRequestContextInitializer.java" line="32" method="initializeRequestContext"/>
+                  <ns2:frame class="com.donriver.finance.services.web.aop.impl.WebMethodRequestContextInitializingAspect" file="WebMethodRequestContextInitializingAspect.java" line="33" method="initializeRequestContext"/>
+                  <ns2:frame class="com.donriver.finance.products.mpos.channels.security.web.facade.SecurityWebChannelFacadeImpl" file="SecurityWebChannelFacadeImpl.java" line="153" method="authorizeChangeRequest_aroundBody160"/>
+                  <ns2:frame class="com.donriver.finance.products.mpos.channels.security.web.facade.SecurityWebChannelFacadeImpl$AjcClosure161" file="SecurityWebChannelFacadeImpl.java" line="1" method="run"/>
+                  <ns2:frame class="org.aspectj.runtime.reflect.JoinPointImpl" file="JoinPointImpl.java" line="149" method="proceed"/>
+                  <ns2:frame class="com.donriver.finance.services.aop.impl.helpers.MethodLogger" file="MethodLogger.java" line="37" method="logArgs"/>
+                  <ns2:frame class="com.donriver.finance.services.web.aop.impl.WebMethodLoggingAspect" file="WebMethodLoggingAspect.java" line="46" method="logArgs"/>
+                  <ns2:frame class="com.donriver.finance.products.mpos.channels.security.web.facade.SecurityWebChannelFacadeImpl" file="SecurityWebChannelFacadeImpl.java" line="153" method="authorizeChangeRequest"/>
+                  <ns2:frame class="com.donriver.finance.products.mpos.channels.security.web.ws.impl.SecurityWebChannelWSSpringBridgeImpl" line="unknown" method="authorizeChangeRequest"/>
+                  <ns2:frame class="sun.reflect.GeneratedMethodAccessor416" line="unknown" method="invoke"/>
+                  <ns2:frame class="sun.reflect.DelegatingMethodAccessorImpl" file="DelegatingMethodAccessorImpl.java" line="37" method="invoke"/>
+                  <ns2:frame class="java.lang.reflect.Method" file="Method.java" line="611" method="invoke"/>
+                  <ns2:frame class="com.sun.xml.ws.api.server.InstanceResolver$1" file="InstanceResolver.java" line="246" method="invoke"/>
+                  <ns2:frame class="com.sun.xml.ws.server.InvokerTube$2" file="InvokerTube.java" line="146" method="invoke"/>
+                  <ns2:frame class="com.sun.xml.ws.server.sei.EndpointMethodHandler" file="EndpointMethodHandler.java" line="257" method="invoke"/>
+                  <ns2:frame class="com.sun.xml.ws.server.sei.SEIInvokerTube" file="SEIInvokerTube.java" line="93" method="processRequest"/>
+                  <ns2:frame class="com.sun.xml.ws.api.pipe.Fiber" file="Fiber.java" line="595" method="__doRun"/>
+                  <ns2:frame class="com.sun.xml.ws.api.pipe.Fiber" file="Fiber.java" line="554" method="_doRun"/>
+                  <ns2:frame class="com.sun.xml.ws.api.pipe.Fiber" file="Fiber.java" line="539" method="doRun"/>
+                  <ns2:frame class="com.sun.xml.ws.api.pipe.Fiber" file="Fiber.java" line="436" method="runSync"/>
+                  <ns2:frame class="com.sun.xml.ws.server.WSEndpointImpl$2" file="WSEndpointImpl.java" line="243" method="process"/>
+                  <ns2:frame class="com.sun.xml.ws.transport.http.HttpAdapter$HttpToolkit" file="HttpAdapter.java" line="444" method="handle"/>
+                  <ns2:frame class="com.sun.xml.ws.transport.http.HttpAdapter" file="HttpAdapter.java" line="244" method="handle"/>
+                  <ns2:frame class="com.sun.xml.ws.transport.http.servlet.ServletAdapter" file="ServletAdapter.java" line="135" method="handle"/>
+                  <ns2:frame class="com.sun.xml.ws.transport.http.servlet.WSServletDelegate" file="WSServletDelegate.java" line="129" method="doGet"/>
+                  <ns2:frame class="com.sun.xml.ws.transport.http.servlet.WSServletDelegate" file="WSServletDelegate.java" line="160" method="doPost"/>
+                  <ns2:frame class="com.sun.xml.ws.transport.http.servlet.WSServlet" file="WSServlet.java" line="75" method="doPost"/>
+                  <ns2:frame class="javax.servlet.http.HttpServlet" file="HttpServlet.java" line="738" method="service"/>
+                  <ns2:frame class="javax.servlet.http.HttpServlet" file="HttpServlet.java" line="831" method="service"/>
+                  <ns2:frame class="com.ibm.ws.webcontainer.servlet.ServletWrapper" file="ServletWrapper.java" line="1658" method="service"/>
+                  <ns2:frame class="com.ibm.ws.webcontainer.servlet.ServletWrapper" file="ServletWrapper.java" line="940" method="handleRequest"/>
+                  <ns2:frame class="com.ibm.ws.webcontainer.servlet.ServletWrapper" file="ServletWrapper.java" line="503" method="handleRequest"/>
+                  <ns2:frame class="com.ibm.ws.webcontainer.servlet.ServletWrapperImpl" file="ServletWrapperImpl.java" line="181" method="handleRequest"/>
+                  <ns2:frame class="com.ibm.ws.webcontainer.servlet.CacheServletWrapper" file="CacheServletWrapper.java" line="91" method="handleRequest"/>
+                  <ns2:frame class="com.ibm.ws.webcontainer.WebContainer" file="WebContainer.java" line="875" method="handleRequest"/>
+                  <ns2:frame class="com.ibm.ws.webcontainer.WSWebContainer" file="WSWebContainer.java" line="1592" method="handleRequest"/>
+                  <ns2:frame class="com.ibm.ws.webcontainer.channel.WCChannelLink" file="WCChannelLink.java" line="186" method="ready"/>
+                  <ns2:frame class="com.ibm.ws.http.channel.inbound.impl.HttpInboundLink" file="HttpInboundLink.java" line="453" method="handleDiscrimination"/>
+                  <ns2:frame class="com.ibm.ws.http.channel.inbound.impl.HttpInboundLink" file="HttpInboundLink.java" line="515" method="handleNewRequest"/>
+                  <ns2:frame class="com.ibm.ws.http.channel.inbound.impl.HttpInboundLink" file="HttpInboundLink.java" line="306" method="processRequest"/>
+                  <ns2:frame class="com.ibm.ws.http.channel.inbound.impl.HttpInboundLink" file="HttpInboundLink.java" line="277" method="ready"/>
+                  <ns2:frame class="com.ibm.ws.tcp.channel.impl.NewConnectionInitialReadCallback" file="NewConnectionInitialReadCallback.java" line="214" method="sendToDiscriminators"/>
+                  <ns2:frame class="com.ibm.ws.tcp.channel.impl.NewConnectionInitialReadCallback" file="NewConnectionInitialReadCallback.java" line="113" method="complete"/>
+                  <ns2:frame class="com.ibm.ws.tcp.channel.impl.AioReadCompletionListener" file="AioReadCompletionListener.java" line="165" method="futureCompleted"/>
+                  <ns2:frame class="com.ibm.io.async.AbstractAsyncFuture" file="AbstractAsyncFuture.java" line="217" method="invokeCallback"/>
+                  <ns2:frame class="com.ibm.io.async.AsyncChannelFuture" file="AsyncChannelFuture.java" line="161" method="fireCompletionActions"/>
+                  <ns2:frame class="com.ibm.io.async.AsyncFuture" file="AsyncFuture.java" line="138" method="completed"/>
+                  <ns2:frame class="com.ibm.io.async.ResultHandler" file="ResultHandler.java" line="204" method="complete"/>
+                  <ns2:frame class="com.ibm.io.async.ResultHandler" file="ResultHandler.java" line="775" method="runEventProcessingLoop"/>
+                  <ns2:frame class="com.ibm.io.async.ResultHandler$2" file="ResultHandler.java" line="905" method="run"/>
+                  <ns2:frame class="com.ibm.ws.util.ThreadPool$Worker" file="ThreadPool.java" line="1646" method="run"/>
+               </ns2:stackTrace>
+            </ns2:exception>
+         </detail>
+      </S:Fault>
+   </S:Body>
+</S:Envelope> 
